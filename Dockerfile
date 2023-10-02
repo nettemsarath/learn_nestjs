@@ -8,8 +8,8 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package*.json ./
 
-ENV NODE_ENV=production
-ENV NAME=sarath_prod
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
